@@ -1,4 +1,4 @@
-import { Button, Dropdown, Space } from "antd";
+import { Button, Dropdown, message, Space } from "antd";
 import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { FaHome } from "react-icons/fa";
@@ -9,6 +9,25 @@ import { TbSettingsStar } from "react-icons/tb";
 import {  Modal, Form, Input } from "antd";
 
 const Navbar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const onFinish = (values) => {
+    console.log("Form values:", values);
+    setIsModalOpen(false);
+    message.success("Sent Your Message")
+  };
   const items = [
     {
       key: "1",
@@ -44,7 +63,7 @@ const Navbar = () => {
     },
     {
       key: "6",
-      label: <span className="block lg:hidden">Contact Us</span>,
+      label: <span onClick={showModal} className="block lg:hidden">Contact Us</span>,
       icon: (
         <span className="block lg:hidden">
           <RiContactsFill />
@@ -54,24 +73,7 @@ const Navbar = () => {
     },
   ];
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-
-  const onFinish = (values) => {
-    console.log("Form values:", values);
-    setIsModalOpen(false);
-  };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Form failed:", errorInfo);
@@ -81,7 +83,7 @@ const Navbar = () => {
     <div className="bg-green-500 py-4">
       <header className="w-full flex justify-between items-center px-5 text-white">
         {/* Logo */}
-        <h1 className="text-2xl md:text-4xl font-bold">CashEase</h1>
+        <h1 className="text-2xl md:text-4xl font-bold">ABS</h1>
 
         {/* Hamburger Menu for Mobile */}
         <div className="flex gap-4">
