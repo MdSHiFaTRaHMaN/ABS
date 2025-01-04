@@ -10,19 +10,19 @@ import { PiStarFourFill } from "react-icons/pi";
 const testimonials = [
   {
     description:
-      "When I research companies online, I don’t just want to hear the company’s pitch. I want to hear from its customers. That’s where customer testimonials come into play, and I’ve got 25 testimonial!",
+      "When I research companies online, I don’t just want to hear the company’s pitch. I want to hear from its customers. That’s where customer testimonials come into play!",
     headline: "Shakib Al Hasan",
     image: Shakib,
   },
   {
     description:
-      "When I research companies online, I don’t just want to hear the company’s pitch. I want to hear from its customers. That’s where customer testimonials come into play, and I’ve got 25 testimonial!",
+      "When I research companies online, I don’t just want to hear the company’s pitch. I want to hear from its customers. That’s where customer testimonials come into play.",
     headline: "Leonal Messi",
     image: Messi,
   },
   {
     description:
-      "When I research companies online, I don’t just want to hear the company’s pitch. I want to hear from its customers. That’s where customer testimonials come into play, and I’ve got 25 testimonial.",
+      "When I research companies online, I don’t just want to hear the company’s pitch. I want to hear from its customers. That’s where customer testimonials come into play.",
     headline: "Afran Nishu",
     image: Nishu,
   },

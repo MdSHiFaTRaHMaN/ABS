@@ -7,6 +7,7 @@ import { RiContactsFill } from "react-icons/ri";
 import { SiBlogger } from "react-icons/si";
 import { TbSettingsStar } from "react-icons/tb";
 import {  Modal, Form, Input } from "antd";
+import ABS from "../assets/ABS.png"
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,7 +84,10 @@ const Navbar = () => {
     <div className="bg-green-500 py-4">
       <header className="w-full flex justify-between items-center px-5 text-white">
         {/* Logo */}
+        <div className="flex items-center">
+          <img src={ABS} alt="" width={60} />
         <h1 className="text-2xl md:text-4xl font-bold">ABS</h1>
+        </div>
 
         {/* Hamburger Menu for Mobile */}
         <div className="flex gap-4">
