@@ -8,6 +8,7 @@ import { SiBlogger } from "react-icons/si";
 import { TbSettingsStar } from "react-icons/tb";
 import { Modal, Form, Input } from "antd";
 import ABS from "../assets/ABS.png";
+import Login from "../component/Login";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -75,7 +76,7 @@ const Navbar = () => {
         </span>
       ),
       extra: <span className="block lg:hidden">⌘C</span>,
-    },
+    }
   ];
 
   const onFinishFailed = (errorInfo) => {
@@ -97,6 +98,18 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  // Show the login modal
+  const showLoginModal = () => {
+    setIsLoginModalOpen(true);
+  };
+
+  // Close the login modal
+  const handleCancelLoginModal = () => {
+    setIsLoginModalOpen(false);
+  };
+
   return (
     <div className="bg-primary-light dark:bg-primary-dark py-4">
       <header className="w-full flex justify-between items-center px-5 text-white">
@@ -114,6 +127,9 @@ const Navbar = () => {
           >
             Contact Us
           </Button>
+          <Button onClick={showLoginModal} className="font-bold">LOGIN</Button>
+
+          <Login isLoginModalOpen={isLoginModalOpen} handleCancel={handleCancelLoginModal}/>
           <button
             onClick={toggleDarkMode}
             className="flex items-center gap-2 px-2.5 py-2.5 rounded-full shadow-lg bg-white dark:bg-yellow-500 text-yellow-900 dark:text-black font-medium transition-all duration-300 transform hover:scale-110 hover:rotate-12 active:scale-95"
@@ -194,6 +210,8 @@ const Navbar = () => {
           </Form.Item>
         </Form>
       </Modal>
+
+     
     </div>
   );
 };
