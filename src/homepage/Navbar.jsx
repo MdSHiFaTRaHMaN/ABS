@@ -1,13 +1,13 @@
 import { Button, Dropdown, message, Space } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaMoon, FaSun } from "react-icons/fa";
 import { FaUsersGear } from "react-icons/fa6";
 import { RiContactsFill } from "react-icons/ri";
 import { SiBlogger } from "react-icons/si";
 import { TbSettingsStar } from "react-icons/tb";
-import {  Modal, Form, Input } from "antd";
-import ABS from "../assets/ABS.png"
+import { Modal, Form, Input } from "antd";
+import ABS from "../assets/ABS.png";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,7 +27,7 @@ const Navbar = () => {
   const onFinish = (values) => {
     console.log("Form values:", values);
     setIsModalOpen(false);
-    message.success("Sent Your Message")
+    message.success("Sent Your Message");
   };
   const items = [
     {
@@ -64,7 +64,11 @@ const Navbar = () => {
     },
     {
       key: "6",
-      label: <span onClick={showModal} className="block lg:hidden">Contact Us</span>,
+      label: (
+        <span onClick={showModal} className="block lg:hidden">
+          Contact Us
+        </span>
+      ),
       icon: (
         <span className="block lg:hidden">
           <RiContactsFill />
@@ -74,29 +78,53 @@ const Navbar = () => {
     },
   ];
 
-
-
   const onFinishFailed = (errorInfo) => {
     console.log("Form failed:", errorInfo);
   };
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+  // Add or remove the dark class to the HTML element
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
-    <div className="bg-green-500 py-4">
+    <div className="bg-primary-light dark:bg-primary-dark py-4">
       <header className="w-full flex justify-between items-center px-5 text-white">
         {/* Logo */}
         <div className="flex items-center">
-          <img src={ABS} alt="" width={60} />
-        <h1 className="text-2xl md:text-4xl font-bold">ABS</h1>
+          <img src={ABS} alt="Website Logo" width={60} />
+          <h1 className="text-2xl md:text-4xl font-bold">ABS</h1>
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
           <Button
             onClick={showModal}
             className="bg-white font-semibold text-green-500 rounded-full hidden lg:block"
           >
             Contact Us
           </Button>
+          <button
+            onClick={toggleDarkMode}
+            className="flex items-center gap-2 px-2.5 py-2.5 rounded-full shadow-lg bg-white dark:bg-yellow-500 text-yellow-900 dark:text-black font-medium transition-all duration-300 transform hover:scale-110 hover:rotate-12 active:scale-95"
+          >
+            {/* Icon change based on darkMode state */}
+            {darkMode ? (
+              <FaSun className="text-xl animate-pulse" />
+            ) : (
+              <FaMoon className="text-xl animate-pulse" />
+            )}
+          </button>
           <Dropdown
             menu={{
               items,

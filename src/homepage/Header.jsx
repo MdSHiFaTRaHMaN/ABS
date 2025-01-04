@@ -3,7 +3,7 @@ import Bannar from "../assets/bannar1.png";
 
 const Header = () => {
   return (
-    <section className="text-gray-600 body-font bg-green-500 pt-0 lg:pt-[160px]">
+    <section className="text-gray-600 body-font bg-primary-light dark:bg-primary-dark pt-0 lg:pt-[160px]">
       <div className="container px-5  mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full"> 
           <div className="lg:w-3/6  md:pr-10 md:py-6">

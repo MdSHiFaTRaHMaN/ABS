@@ -9,11 +9,11 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-green-500 text-white py-8 mt-0 lg:mt-10">
+    <footer className="bg-green-500 dark:bg-primary-dark text-white dark:text-gray-100 py-8 pt-0 lg:pt-10">
       {/* Left Section: Logo and Description */}
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-6 md:mb-0 w-10/12 mx-auto">
         <div className="flex items-center mb-4 md:mb-0">
-          <div className="bg-white text-green-500 rounded-full p-2">
+          <div className="bg-white text-green-500 rounded-full p-2 dark:bg-gray-700 dark:text-green-400">
             <span className="font-bold text-xl p-2">G</span>
           </div>
           <h1 className="text-2xl font-bold ml-2">CashEase</h1>
@@ -26,7 +26,7 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="hidden lg:block w-10/12 mx-auto h-px bg-white my-6"></div>
+      <div className="hidden lg:block w-10/12 mx-auto h-px bg-white my-6 dark:bg-gray-600"></div>
 
       {/* Right Section: Social Icons and Copyright */}
       <div className="flex flex-col md:flex-row justify-between items-center w-10/12 mx-auto">
@@ -36,35 +36,35 @@ const Footer = () => {
         <div className="flex space-x-4 mb-4 md:mb-0">
           <a
             href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200"
+            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
             aria-label="Facebook"
           >
             <FaFacebookF />
           </a>
           <a
             href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200"
+            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
             aria-label="Twitter"
           >
             <FaTwitter />
           </a>
           <a
             href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200"
+            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
             aria-label="Instagram"
           >
             <FaInstagram />
           </a>
           <a
             href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200"
+            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
             aria-label="LinkedIn"
           >
             <FaLinkedinIn />
           </a>
           <a
             href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200"
+            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
             aria-label="YouTube"
           >
             <FaYoutube />

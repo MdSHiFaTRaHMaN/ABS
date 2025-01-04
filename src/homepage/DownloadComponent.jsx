@@ -1,23 +1,25 @@
-import Apple from "../assets/playstore.png"
+import Apple from "../assets/playstore.png";
 import "tailwindcss/tailwind.css";
-import DubblePhone from "../assets/dubble.png"
+import DubblePhone from "../assets/dubble.png";
 
 const DownloadComponent = () => {
   return (
-    <div className="bg-green-500 p-8 h-[400px] flex flex-col lg:flex-row items-center lg:justify-between max-w-6xl mx-auto">
+    <div className="bg-white dark:bg-primary-dark">
+
+    <div className="bg-green-500 dark:bg-gray-800 p-8 h-[400px] flex flex-col lg:flex-row items-center lg:justify-between max-w-6xl mx-auto">
       {/* Left Section: Text Content */}
       <div className="text-white flex-1 mb-6 lg:mb-0 lg:mr-8">
         <h2 className="text-3xl lg:text-3xl font-bold mb-4">
           Download & Install CashEase Now<br />
           Start Enjoying Digital Payment Convenience!
         </h2>
-        <p className="text-lg">
+        <p className="text-lg text-gray-100 dark:text-gray-300">
           Register today and access a wide range of fantastic features, including easy
           transactions, quick payments.
         </p>
         {/* Download Buttons */}
-        <div className="">
-          <img src={Apple} alt="" />
+        <div className="mt-4">
+          <img src={Apple} alt="Apple Store" className="w-[150px] lg:w-[200px]" />
         </div>
       </div>
 
@@ -31,6 +33,7 @@ const DownloadComponent = () => {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 };
