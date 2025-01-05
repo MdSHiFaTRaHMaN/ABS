@@ -76,7 +76,7 @@ const Navbar = () => {
         </span>
       ),
       extra: <span className="block lg:hidden">⌘C</span>,
-    }
+    },
   ];
 
   const onFinishFailed = (errorInfo) => {
@@ -116,8 +116,8 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <img src={ABS} alt="Website Logo" width={60} />
-          <h1 className="text-2xl md:text-4xl font-bold">ABS</h1>
         </div>
+
 
         {/* Hamburger Menu for Mobile */}
         <div className="flex items-center gap-4">
@@ -127,9 +127,14 @@ const Navbar = () => {
           >
             Contact Us
           </Button>
-          <Button onClick={showLoginModal} className="font-bold">LOGIN</Button>
+          <Button onClick={showLoginModal} className="font-bold">
+            LOGIN
+          </Button>
 
-          <Login isLoginModalOpen={isLoginModalOpen} handleCancel={handleCancelLoginModal}/>
+          <Login
+            isLoginModalOpen={isLoginModalOpen}
+            handleCancel={handleCancelLoginModal}
+          />
           <button
             onClick={toggleDarkMode}
             className="flex items-center gap-2 px-2.5 py-2.5 rounded-full shadow-lg bg-white dark:bg-yellow-500 text-yellow-900 dark:text-black font-medium transition-all duration-300 transform hover:scale-110 hover:rotate-12 active:scale-95"
@@ -210,8 +215,6 @@ const Navbar = () => {
           </Form.Item>
         </Form>
       </Modal>
-
-     
     </div>
   );
 };
