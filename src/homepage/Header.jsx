@@ -15,7 +15,7 @@ const Header = () => {
               Managing Your Personal Finances Made Easier
             </h1>
             <p className="mt-3 text-lg lg:text-xl text-white">
-              Elevate your financial experience with CashEase. We simplify how
+              Elevate your financial experience with Gittiom. We simplify how
               you pay, transfer money, and manage your finances, giving you full
               control over your money.
             </p>

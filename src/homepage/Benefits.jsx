@@ -30,7 +30,7 @@ const Benefits = () => {
               Fast and Secure Transactions
             </h3>
             <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm">
-              Enjoy secure and instant payments anywhere, anytime. CashEase
+              Enjoy secure and instant payments anywhere, anytime. Gittiom
               gives you peace of mind.
             </p>
           </div>

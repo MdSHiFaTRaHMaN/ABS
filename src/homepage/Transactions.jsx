@@ -13,7 +13,7 @@ const Transactions = () => {
           <div className="mb-4 w-[280px]">
             <span className="bg-orange-100 dark:bg-orange-800 text-orange-500 dark:text-orange-200 text-center py-2 px-4 rounded-full text-sm font-medium flex items-center">
               <DownloadOutlined className="mr-2" /> Anywhere, Anytime with
-              CashEase
+              Gittiom
             </span>
           </div>
 
@@ -21,7 +21,7 @@ const Transactions = () => {
             All Transactions Easily on Your Mobile
           </h2>
           <p className="mt-5 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-            Paying for anything is as easy as a tap. With CashEase, you can
+            Paying for anything is as easy as a tap. With Gittiom, you can
             effortlessly handle a wide range of transactions, from bill payments
             and barcode scans to e-commerce.
           </p>

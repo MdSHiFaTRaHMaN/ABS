@@ -19,7 +19,7 @@ const Footer = () => {
           <h1 className="text-3xl font-bold">Gittiom</h1>
         </div>
         <p className="text-center md:text-left max-w-sm md:ml-6">
-          CashEase is an e-wallet app that allows you to store money, make
+          Gittiom is an e-wallet app that allows you to store money, make
           payments, and perform other financial transactions electronically
           through your mobile device.
         </p>
@@ -31,7 +31,7 @@ const Footer = () => {
       {/* Right Section: Social Icons and Copyright */}
       <div className="flex flex-col md:flex-row justify-between items-center w-10/12 mx-auto">
         <p className="text-sm text-center md:text-right mb-4 md:mb-0">
-          &copy; 2023 CashEase | All Rights Reserved
+          &copy; 2023 Gittiom | All Rights Reserved
         </p>
         <div className="flex space-x-4 mb-4 md:mb-0">
           <a

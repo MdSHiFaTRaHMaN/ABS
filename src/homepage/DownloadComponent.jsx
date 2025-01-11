@@ -10,7 +10,7 @@ const DownloadComponent = () => {
       {/* Left Section: Text Content */}
       <div className="text-white flex-1 mb-6 lg:mb-0 lg:mr-8">
         <h2 className="text-3xl lg:text-3xl font-bold mb-4">
-          Download & Install CashEase Now<br />
+          Download & Install Gittiom Now<br />
           Start Enjoying Digital Payment Convenience!
         </h2>
         <p className="text-lg text-gray-100 dark:text-gray-300">
