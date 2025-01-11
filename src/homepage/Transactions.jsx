@@ -1,5 +1,5 @@
 import { DownloadOutlined } from "@ant-design/icons";
-import PhoneImage from "../assets/PH-Image.jpg";
+import PhoneImage from "../assets/singlePhone.png";
 import { PiRankingLight } from "react-icons/pi";
 import { MdPriceChange } from "react-icons/md";
 import { BiTransferAlt } from "react-icons/bi";
@@ -40,7 +40,7 @@ const Transactions = () => {
           <img
             src={PhoneImage}
             alt="Phone showcasing transactions"
-            className="w-[440px] z-10"
+            className="w-[380px] z-10"
           />
 
           {/* Feature Card: Transfer */}

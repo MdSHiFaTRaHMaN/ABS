@@ -7,8 +7,7 @@ import { RiContactsFill } from "react-icons/ri";
 import { SiBlogger } from "react-icons/si";
 import { TbSettingsStar } from "react-icons/tb";
 import { Modal, Form, Input } from "antd";
-import ABS from "../assets/ABS.png";
-import Login from "../component/Login";
+import Logo from "../assets/webLogo.png";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -98,46 +97,34 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-
-  // Show the login modal
-  const showLoginModal = () => {
-    setIsLoginModalOpen(true);
-  };
-
-  // Close the login modal
-  const handleCancelLoginModal = () => {
-    setIsLoginModalOpen(false);
-  };
-
   return (
     <div className="bg-primary-light dark:bg-primary-dark py-4">
-      <header className="w-full flex justify-between items-center px-5 text-white">
+      <header className="w-full flex justify-between items-center px-2 lg:px-5 text-white">
         {/* Logo */}
         <div className="flex items-center">
-          <img src={ABS} alt="Website Logo" width={60} />
+          <img src={Logo} alt="Website Logo" width={60} />
+          <h1 className="text-3xl font-bold">Gittiom</h1>
         </div>
-
 
         {/* Hamburger Menu for Mobile */}
         <div className="flex items-center gap-4">
-          <Button
+          {/* <Button
             onClick={showModal}
             className="bg-white font-semibold text-green-500 rounded-full hidden lg:block"
           >
             Contact Us
-          </Button>
-          <Button onClick={showLoginModal} className="font-bold">
+          </Button> */}
+          <Button
+            className="bg-white font-semibold text-green-500 rounded-full"
+            onClick={() =>
+              window.open("/login", "_blank")
+            }
+          >
             LOGIN
           </Button>
-
-          <Login
-            isLoginModalOpen={isLoginModalOpen}
-            handleCancel={handleCancelLoginModal}
-          />
           <button
             onClick={toggleDarkMode}
-            className="flex items-center gap-2 px-2.5 py-2.5 rounded-full shadow-lg bg-white dark:bg-yellow-500 text-yellow-900 dark:text-black font-medium transition-all duration-300 transform hover:scale-110 hover:rotate-12 active:scale-95"
+            className="hidden items-center gap-2 px-2.5 py-2.5 rounded-full shadow-lg bg-white dark:bg-yellow-500 text-yellow-900 dark:text-black font-medium transition-all duration-300 transform hover:scale-110 hover:rotate-12 active:scale-95"
           >
             {/* Icon change based on darkMode state */}
             {darkMode ? (

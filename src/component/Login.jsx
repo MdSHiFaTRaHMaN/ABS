@@ -1,53 +1,83 @@
-import { Modal, Form, Input, message } from "antd";
+import { Form, Input, Button, Typography, Card, message } from "antd";
+import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 
-const Login = ({ isLoginModalOpen, handleCancel }) => {
+const { Title, Text } = Typography;
 
+const Login = () => {
+  const navigate = useNavigate()
   const onFinish = (values) => {
     console.log("Form values:", values);
     message.success("Logged in successfully!");
-    handleCancel(); // Close the modal after successful login
+    navigate("/")
   };
 
   return (
-    <Modal
-      title="Login"
-      open={isLoginModalOpen}
-      onCancel={handleCancel}
-      footer={null} // Remove default footer buttons
-    >
-      <Form
-        name="login_form"
-        layout="vertical"
-        onFinish={onFinish}
-        autoComplete="off"
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+      <Card
+        className="shadow-lg"
+        style={{
+          maxWidth: "400px",
+          width: "100%",
+          borderRadius: "10px",
+          padding: "20px",
+          backgroundColor: "#fff",
+        }}
       >
-        <Form.Item
-          name="email"
-          label="Email"
-          rules={[
-            { required: true, message: "Please enter your email!" },
-            { type: "email", message: "Please enter a valid email!" },
-          ]}
+        <Title level={3} style={{ textAlign: "center", marginBottom: "20px" }}>
+          Welcome Back!
+        </Title>
+        <Text type="secondary" style={{ textAlign: "center", display: "block", marginBottom: "20px" }}>
+          Please login to your account
+        </Text>
+        <Form
+          name="login_form"
+          layout="vertical"
+          onFinish={onFinish}
+          autoComplete="off"
         >
-          <Input placeholder="Enter your email" />
-        </Form.Item>
-        <Form.Item
-          name="password"
-          label="Password"
-          rules={[{ required: true, message: "Please enter your password!" }]}
-        >
-          <Input.Password placeholder="Enter your password" />
-        </Form.Item>
-        <Form.Item>
-          <button
-            type="submit"
-            className="w-full py-2 px-4 bg-green-500 text-white rounded hover:bg-green-600"
+          <Form.Item
+            name="email"
+            label="Email"
+            rules={[
+              { required: true, message: "Please enter your email!" },
+              { type: "email", message: "Please enter a valid email!" },
+            ]}
           >
-            Login
-          </button>
-        </Form.Item>
-      </Form>
-    </Modal>
+            <Input
+              prefix={<UserOutlined className="text-gray-400" />}
+              placeholder="Enter your email"
+              className="rounded"
+            />
+          </Form.Item>
+          <Form.Item
+            name="password"
+            label="Password"
+            rules={[{ required: true, message: "Please enter your password!" }]}
+          >
+            <Input.Password
+              prefix={<LockOutlined className="text-gray-400" />}
+              placeholder="Enter your password"
+              className="rounded"
+            />
+          </Form.Item>
+          <Form.Item>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="w-full"
+              style={{
+                backgroundColor: "#6C5CE7",
+                borderColor: "#6C5CE7",
+                borderRadius: "5px",
+              }}
+            >
+              Login
+            </Button>
+          </Form.Item>
+        </Form>
+      </Card>
+    </div>
   );
 };
 
