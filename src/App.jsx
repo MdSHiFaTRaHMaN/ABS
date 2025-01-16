@@ -11,12 +11,20 @@ function App() {
   return (
     <>
       <Navbar />
-      <Header />
-      <Benefits />
+      <div id="home">
+        <Header />
+      </div>
+      <div id="features">
+        <Benefits />
+      </div>
       <Transactions />
-      <Testimonial />
+      <div id="testimonial">
+        <Testimonial />
+      </div>
       <FAQComponent />
-      <DownloadComponent />
+      <div id="download">
+        <DownloadComponent />
+      </div>
       <Footer />
     </>
   );
