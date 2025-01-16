@@ -117,7 +117,11 @@ const Navbar = () => {
           <Button
             className="bg-white font-semibold text-green-500 rounded-full"
             onClick={() =>
-              window.open("/login", "_blank")
+              window.open(
+                "https://gittiom.hunteats.com/#/login",
+                "_blank",
+                "noopener,noreferrer"
+              )
             }
           >
             LOGIN
