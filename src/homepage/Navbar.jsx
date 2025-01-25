@@ -194,7 +194,7 @@ const Navbar = () => {
             className="bg-white font-semibold text-green-500 rounded-full"
             onClick={() =>
               window.open(
-                "https://app.gittiom.com",
+                "https://app.gittiom.com/index.html",
                 "_blank",
                 "noopener,noreferrer"
               )

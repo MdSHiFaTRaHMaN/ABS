@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Airtime",
+        "code": "AIRTIME",
+        "description": "Airtime",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 2,
+        "name": "Mobile Data Service",
+        "code": "MOBILEDATA",
+        "description": "Mobile Data Service",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 3,
+        "name": "Cable Bill Payment",
+        "code": "CABLEBILLS",
+        "description": "Cable Bill Payment",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 4,
+        "name": "Internet Service",
+        "code": "INTSERVICE",
+        "description": "Internet Service",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 5,
+        "name": "Utility Bills",
+        "code": "UTILITYBILLS",
+        "description": "Utility Bills",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 6,
+        "name": "Tax Payment",
+        "code": "TAX",
+        "description": "Tax Payment",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 7,
+        "name": "Donations",
+        "code": "DONATIONS",
+        "description": "Donations",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 8,
+        "name": "Transport and Logistics",
+        "code": "TRANSLOG",
+        "description": "Transport and Logistics",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 9,
+        "name": "Dealer Payments",
+        "code": "DEALPAY",
+        "description": "Dealer Payments",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 10,
+        "name": "Airtime",
+        "code": "AIRTIME",
+        "description": "Airtime",
+        "country_code": "GH",
+        "icon": ""
+    },
+    {
+        "id": 11,
+        "name": "Mobile Money",
+        "code": "MOBILEMONEY",
+        "description": "Mobile Money",
+        "country_code": "GH",
+        "icon": ""
+    },
+    {
+        "id": 12,
+        "name": "Airtime",
+        "code": "AIRTIME",
+        "description": "Airtime",
+        "country_code": "KE",
+        "icon": ""
+    },
+    {
+        "id": 13,
+        "name": "Cable Bill Payment",
+        "code": "CABLEBILLS",
+        "description": "Cable Bill Payment",
+        "country_code": "KE",
+        "icon": ""
+    },
+    {
+        "id": 14,
+        "name": "Utility Bills",
+        "code": "UTILITYBILLS",
+        "description": "Utility Bills",
+        "country_code": "KE",
+        "icon": ""
+    },
+    {
+        "id": 15,
+        "name": "Mobile Money",
+        "code": "MOBILEMONEY",
+        "description": "Mobile Money",
+        "country_code": "ZM",
+        "icon": ""
+    },
+    {
+        "id": 16,
+        "name": "Airtime",
+        "code": "Airtime",
+        "description": "Airtime",
+        "country_code": "ZM",
+        "icon": ""
+    },
+    {
+        "id": 17,
+        "name": "Religious Institutions",
+        "code": "RELINST",
+        "description": "Religious Institutions",
+        "country_code": "NG",
+        "icon": ""
+    },
+    {
+        "id": 18,
+        "name": "Schools & Professional Bodies",
+        "code": "SCHPB",
+        "description": "Schools & Professional Bodies",
+        "country_code": "NG",
+        "icon": ""
+    }
+]
