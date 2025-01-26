@@ -258,14 +258,14 @@ const Navbar = () => {
               <Link
                 key={list.id}
                 onClick={onClose}
-                className="hover:text-blue-500 flex gap-y-4 items-center space-x-3 p-1 rounded-lg my-2 ml-[45px]"
+                className="hover:text-blue-500 flex gap-y-4 space-x-3 p-1 rounded-lg my-2 ml-[30px]"
               >
-                <span style={{ color: list.color }} className="text-2xl p-1">
+                <span style={{ color: list.color }} className="text-md p-1">
                   {list.icon}
                 </span>
                 <div>
                   <h2 className="text-base font-[500]">{list.name}</h2>
-                  <p className="text-sm text-gray-600">{list.description}</p>
+                  <p className="text-sm text-gray-500">{list.description}</p>
                 </div>
               </Link>
             ))}
