@@ -1,77 +1,66 @@
-import "tailwindcss/tailwind.css";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
-import Logo from "../assets/webLogo.png"
+import { Link } from "react-router-dom";
+import Logo from "../assets/webLogo.png";
 const Footer = () => {
   return (
-    <footer className="bg-green-500 dark:bg-primary-dark text-white dark:text-gray-100 py-8 pt-0 lg:pt-10">
-      {/* Left Section: Logo and Description */}
-      <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-6 md:mb-0 w-10/12 mx-auto">
-        <div className="flex items-center mb-4 md:mb-0">
-          <div className=" text-green-500 p-2 dark:bg-gray-700 dark:text-green-400">
-            <img src={Logo} className="font-bold text-xl p-2" width={100}/>
+    <div className="bg-green-600 py-10 px-4 text-white">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Logo and Description */}
+        <div>
+          <div className="flex items-center space-x-2 mb-4">
+            <img src={Logo} alt="Gitty Logistics Logo" className="h-10" />
+            <span className="text-xl font-semibold">Gittiom</span>
           </div>
-          <h1 className="text-3xl font-bold">Gittiom</h1>
+          <p>
+            gizion.com is a dynamic organization that powers a range of
+            businesses, including the renowned gittiom.com, where you can
+            conveniently buy and sell cryptocurrencies.
+          </p>
+          <div className="mt-4 text-sm ">
+            <p>
+              <strong>Address:</strong> No 27 Obazee Street Isiyor, Benin City,
+              Edo State, Nigeria.
+            </p>
+            <p>
+              <strong>Phone:</strong> +234 904 298 0643
+            </p>
+            <p>
+              <strong>Email:</strong> support@giziom.com
+            </p>
+          </div>
         </div>
-        <p className="text-center md:text-left max-w-sm md:ml-6">
-          Gittiom is an e-wallet app that allows you to store money, make
-          payments, and perform other financial transactions electronically
-          through your mobile device.
-        </p>
-      </div>
 
-      {/* Divider */}
-      <div className="hidden lg:block w-10/12 mx-auto h-px bg-white my-6 dark:bg-gray-600"></div>
+        {/* Community Section */}
+        <div className="text-white">
+          <h3 className="text-lg font-medium mb-3">Our Community</h3>
+          <ul className=" space-y-2">
+            <li>Community</li>
+            <li>Blog</li>
+            <li>Forums</li>
+            <li>Meetups</li>
+          </ul>
+        </div>
 
-      {/* Right Section: Social Icons and Copyright */}
-      <div className="flex flex-col md:flex-row justify-between items-center w-10/12 mx-auto">
-        <p className="text-sm text-center md:text-right mb-4 md:mb-0">
-          &copy; 2023 Gittiom | All Rights Reserved
-        </p>
-        <div className="flex space-x-4 mb-4 md:mb-0">
-          <a
-            href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
-            aria-label="Facebook"
-          >
-            <FaFacebookF />
-          </a>
-          <a
-            href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
-            aria-label="Twitter"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
-            aria-label="Instagram"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="#"
-            className="bg-white text-green-500 p-2 rounded-full hover:bg-gray-200 dark:bg-gray-700 dark:text-green-400 dark:hover:bg-gray-600"
-            aria-label="YouTube"
-          >
-            <FaYoutube />
-          </a>
+        {/* Help Section */}
+        <div className="text-white">
+          <h3 className="text-lg font-medium mb-3">Help</h3>
+          <ul className=" space-y-2">
+            <li>Help Center</li>
+            <li>Authors</li>
+          </ul>
+        </div>
+
+        {/* Giziom Market Section */}
+        <div className="text-white">
+          <h3 className="text-lg font-medium mb-3">Giziom Market</h3>
+          <ul className=" space-y-2">
+            <Link to="/term&condition">Terms</Link>
+            <li>Licenses</li>
+            <li>Market API</li>
+            <li>Become an Affiliate</li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

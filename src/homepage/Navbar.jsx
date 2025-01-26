@@ -1,15 +1,12 @@
 import { Button, Drawer, Menu } from "antd";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
-  FaHandsHelping,
   FaInternetExplorer,
   FaLightbulb,
   FaMobileAlt,
   FaMoneyBillWave,
-  FaMoon,
   FaSchool,
   FaStore,
-  FaSun,
   FaTruck,
   FaTv,
   FaUnity,
@@ -21,23 +18,10 @@ import { Link } from "react-router-dom";
 import { IoMdAirplane } from "react-icons/io";
 import { BsDatabaseFillGear } from "react-icons/bs";
 import { LuCable } from "react-icons/lu";
+import Panel from "antd/es/splitter/Panel";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  // Toggle dark mode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-  // Add or remove the dark class to the HTML element
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
   const [visible, setVisible] = useState(false); // Drawer visibility state
 
   const showDrawer = () => {
@@ -205,17 +189,6 @@ const Navbar = () => {
           <button className="bg-green-500 text-2xl" onClick={showDrawer}>
             <RiMenu3Line />
           </button>
-          <button
-            onClick={toggleDarkMode}
-            className="hidden items-center gap-2 px-2.5 py-2.5 rounded-full shadow-lg bg-white dark:bg-yellow-500 text-yellow-900 dark:text-black font-medium transition-all duration-300 transform hover:scale-110 hover:rotate-12 active:scale-95"
-          >
-            {/* Icon change based on darkMode state */}
-            {darkMode ? (
-              <FaSun className="text-xl animate-pulse" />
-            ) : (
-              <FaMoon className="text-xl animate-pulse" />
-            )}
-          </button>
         </div>
       </header>
 
@@ -223,9 +196,10 @@ const Navbar = () => {
         placement="top"
         onClose={onClose}
         open={visible}
-        className="w-full h-screen"
+        className="w-full h-full p-0"
+        // closeIcon= {false}
         title={
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between ">
             <Link
               to="/"
               // onClick={closeDrawer}
@@ -264,7 +238,7 @@ const Navbar = () => {
           overflowY: "auto",
         }}
       >
-        <Menu mode="inline" className="text-gray-700 font-medium bg-gray-50">
+        <Menu mode="inline" className="text-gray-700 font-medium  w-full p-0">
           <Menu.Item key="home-mobile">
             <Link
               to="/"
@@ -280,19 +254,17 @@ const Navbar = () => {
             popupClassName="mobile-submenu"
             className=""
           >
-            {/* <Menu.Item key="ecommerce">  */}
             {productList.map((list) => (
               <Link
                 key={list.id}
                 onClick={onClose}
-                className="hover:text-blue-500 flex gap-y-4 items-center space-x-3 bg-gray-200 p-1 rounded-lg my-2"
+                className="hover:text-blue-500 flex gap-y-4 items-center space-x-3 p-1 rounded-lg my-2 ml-[45px]"
               >
-                {/* আইকনের জন্য */}
-                <span style={{ color: list.color }} className="text-3xl p-1">
+                <span style={{ color: list.color }} className="text-2xl p-1">
                   {list.icon}
                 </span>
                 <div>
-                  <h2 className="text-lg font-semibold">{list.name}</h2>
+                  <h2 className="text-base font-[500]">{list.name}</h2>
                   <p className="text-sm text-gray-600">{list.description}</p>
                 </div>
               </Link>
@@ -317,6 +289,7 @@ const Navbar = () => {
             </Link>
           </Menu.Item>
         </Menu>
+
       </Drawer>
     </div>
   );
